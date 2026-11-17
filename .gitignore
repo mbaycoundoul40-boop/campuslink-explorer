@@ -1,0 +1,12 @@
+# Exécutables
+explorer
+explorer.exe
+*.exe
+
+# Fichiers de clé / secrets
+.env
+*.key
+
+# Fichiers système
+.DS_Store
+Thumbs.db

@@ -1,0 +1,17 @@
+Le HTML décrit le contenu et la structure de la page.
+ Le CSS peut ensuite utiliser les classes pour gérer son apparence
+{{define "contenu"}}
+<h1>Catalogue</h1>
+<p>{{len .Pays}} pays</p>
+<ul class="grille">
+  {{range .Pays}}
+  <li class="carte">
+    <a href="/pays/{{.Code}}">
+      <img src="{{.Drapeau.PNG}}" alt="Drapeau : {{.Nom.Commun}}" width="80">
+      <strong>{{.Nom.Commun}}</strong>
+      <span>{{range .Capitale}}{{.}}{{end}}</span>
+    </a>
+  </li>
+  {{end}}
+</ul>
+{{end}}
